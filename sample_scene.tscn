@@ -1,0 +1,253 @@
+[gd_scene load_steps=15 format=3 uid="uid://d2q54oriddsbg"]
+
+[ext_resource type="Material" uid="uid://dsww37ncpg5y0" path="res://asset/material/Water.material" id="1_utdur"]
+[ext_resource type="Material" uid="uid://cmnnsar7dau37" path="res://asset/sample/ground/Ground.material" id="2_o5yhv"]
+[ext_resource type="ArrayMesh" uid="uid://bned4luklym4m" path="res://asset/sample/boat/Boat.obj" id="3_hqmsp"]
+[ext_resource type="ArrayMesh" uid="uid://dnm7q83d5f8cj" path="res://asset/sample/rock/Rock.obj" id="3_i244u"]
+[ext_resource type="Material" path="res://asset/sample/rock/Rock.material" id="4_dhga3"]
+[ext_resource type="Material" path="res://asset/sample/boat/Boat.material" id="4_o6sht"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_swdcd"]
+size = Vector2(128, 128)
+subdivide_width = 256
+subdivide_depth = 256
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rch7h"]
+size = Vector2(128, 128)
+
+[sub_resource type="Animation" id="Animation_5x3ni"]
+resource_name = "default_animation"
+length = 12.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-5.906, -0.25, 0, 0.25, 0, -4.868, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10.6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.829, -0.25, 0, 0.25, 0, -0.829, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10.6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(2.723, -0.25, 0, 0.25, 0, 0.215, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10.6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.671952, -0.25, 0, 0.25, 0, -0.342085, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10.607)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera3D:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-2.7646, -0.25, 0, 0.25, 0, -0.764454, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10.607)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera3D:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10.607)
+}
+
+[sub_resource type="Animation" id="Animation_555so"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-5.906, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.829, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2.723, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.342085, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera3D:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.14494, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera3D:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xmx4b"]
+_data = {
+"RESET": SubResource("Animation_555so"),
+"default_animation": SubResource("Animation_5x3ni")
+}
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_oavr6"]
+
+[sub_resource type="Sky" id="Sky_6d7je"]
+sky_material = SubResource("PhysicalSkyMaterial_oavr6")
+
+[sub_resource type="Environment" id="Environment_4f44g"]
+background_mode = 2
+sky = SubResource("Sky_6d7je")
+tonemap_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_bloom = 0.32
+
+[node name="SampleScene" type="Node3D"]
+
+[node name="Water" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.98683, 0)
+mesh = SubResource("PlaneMesh_swdcd")
+surface_material_override/0 = ExtResource("1_utdur")
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.738, 0)
+mesh = SubResource("PlaneMesh_rch7h")
+skeleton = NodePath("../Water")
+surface_material_override/0 = ExtResource("2_o5yhv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.466788, 0, -0.884369, 0, 1, 0, 0.884369, 0, 0.466788, -1.1338, -3, -2.45964)
+mesh = ExtResource("3_hqmsp")
+surface_material_override/0 = ExtResource("4_o6sht")
+
+[node name="Rocks" type="Node3D" parent="."]
+
+[node name="Rock1" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-8.45299, 0, -5.58266, 2.97955, 3.42473, -4.51149, 1.88735, -5.40659, -2.85774, 7.50167, -5.0984, -10.4137)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Rock2" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-2.8816, -5.7108, -4.00212, -1.81075, 6.86413, -3.69354, 5.42011, -0.742982, -3.36166, 6.45473, -4.63299, -10.4137)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Rock3" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(5.03286, 4.74675, 2.03339, -3.8662, 6.87239, 1.3841, -0.82637, -3.2435, 5.90844, 4.00962, -4.56572, -7.62493)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Rock4" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(4.66895, -6.12027, 0.223132, 2.07828, 3.50138, 5.51233, -3.85248, -5.52849, 3.24413, 5.82676, -4.66432, 0.29593)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Rock5" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(5.23414, -5.01891, 0.843787, -3.27192, -7.27928, -1.79441, 1.69064, 1.45062, -6.08507, 4.00962, -2.45323, 0.482225)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Rock6" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(3.43575, 13.907, -10.6975, 5.90904, -3.61487, 20.2069, 11.3021, -8.72794, 1.17681, 12.5626, -4.59778, 1.11524)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Rock7" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(11.0718, -14.3148, 1.33504, -7.79142, -8.05962, -3.145, 2.59114, 2.22326, -9.32619, 9.34487, -5.03868, 2.31981)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Rock8" type="MeshInstance3D" parent="Rocks"]
+transform = Transform3D(-2.04565, -13.8528, 2.07388, -1.40415, -1.85515, -9.70419, 13.5591, -8.91484, 0.423051, 6.97818, -5.2834, 4.81487)
+mesh = ExtResource("3_i244u")
+surface_material_override/0 = ExtResource("4_dhga3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.413105, 0.30549, -0.857917, 0, 0.942057, 0.335452, 0.910684, -0.138576, 0.389168, -5.906, -0.829, 2.723)
+fov = 55.0
+far = 256.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default_animation"
+movie_quit_on_finish = true
+libraries = {
+"": SubResource("AnimationLibrary_xmx4b")
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4f44g")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.858405, 0, -0.512972, 0.503797, -0.18829, 0.843051, -0.0965875, -0.982114, -0.161629, 0, 0, 0)
+shadow_enabled = true
